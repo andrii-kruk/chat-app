@@ -1,11 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header>
       <nav>
-        <NavLink to="first">First</NavLink>
-        <NavLink to="second">Second</NavLink>
+        <NavLink to="login">Login</NavLink>
+        <NavLink to="register">Register</NavLink>
       </nav>
     </header>
   );

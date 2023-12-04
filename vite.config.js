@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
@@ -11,5 +11,5 @@ export default defineConfig({
       pages: '/src/pages',
     },
   },
-  base: '/react-vite-template/',
+  base: '/chat-app/',
 });
