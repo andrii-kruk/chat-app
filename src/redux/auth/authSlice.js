@@ -24,7 +24,7 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.userData = payload;
-        isLoggedIn = true;
+        state.isLoggedIn = true;
       })
       .addCase(signUp.pending, (state) => {
         state.isLoading = true;
@@ -37,7 +37,7 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.userData = payload;
-        isLoggedIn = true;
+        state.isLoggedIn = true;
       })
       .addCase(signOut.pending, (state) => {
         state.isLoading = true;
@@ -50,7 +50,7 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.userData = {};
-        isLoggedIn = false;
+        state.isLoggedIn = false;
       });
   },
 });
