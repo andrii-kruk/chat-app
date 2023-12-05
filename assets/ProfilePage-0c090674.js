@@ -1,0 +1,1 @@
+import{u as e,j as t,a as n}from"./index-9f2d37a1.js";const i=()=>{const s=e();return t.jsxs(t.Fragment,{children:[t.jsx("h1",{children:"Profile page"}),t.jsx("button",{type:"button",onClick:()=>s(n()),children:"Sign Out"})]})};export{i as default};
