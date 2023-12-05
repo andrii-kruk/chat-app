@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { signIn } from 'redux/auth/authOperations';
+import { signIn } from '../../redux/auth/authOperations';
 
 const FirstPage = () => {
   const [email, setEmail] = useState('');

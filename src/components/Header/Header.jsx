@@ -4,8 +4,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <NavLink to="login">Login</NavLink>
-        <NavLink to="register">Register</NavLink>
+        <NavLink to="profile">Profile</NavLink>
       </nav>
     </header>
   );

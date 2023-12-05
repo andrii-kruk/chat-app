@@ -1,5 +1,17 @@
+import { useDispatch } from 'react-redux';
+import { signOut } from '../../redux/auth/authOperations';
+
 const HalfPage = () => {
-  return <h1>Half Page</h1>;
+  const dispatch = useDispatch();
+
+  return (
+    <>
+      <h1>Profile page</h1>
+      <button type="button" onClick={() => dispatch(signOut())}>
+        Sign Out
+      </button>
+    </>
+  );
 };
 
 export default HalfPage;

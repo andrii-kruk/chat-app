@@ -9,7 +9,6 @@ export default defineConfig({
       src: '/src',
       components: '/src/components',
       pages: '/src/pages',
-      redux: '/src/redux'
     },
   },
   base: '/chat-app/',

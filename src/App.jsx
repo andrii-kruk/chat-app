@@ -7,18 +7,24 @@ const ProfilePage = lazy(() => import('pages/ProfilePage/ProfilePage'));
 const ErrorPage = lazy(() => import('pages/ErrorPage/ErrorPage'));
 
 import SharedLayout from 'components/SharedLayout/SharedLayout';
+import { PublicRoutes, PrivateRoutes } from 'components/';
 
 const App = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<RegisterPage />} />
-          <Route path="profile" element={<ProfilePage />}></Route>
-
-          <Route path="*" element={<ErrorPage />} />
+        <Route element={<PublicRoutes />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
         </Route>
+
+        <Route element={<PrivateRoutes />}>
+          <Route path="/" element={<SharedLayout />}>
+            <Route path="profile" element={<ProfilePage />} />
+          </Route>
+        </Route>
+
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Suspense>
   );
